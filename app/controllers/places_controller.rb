@@ -1,23 +1,25 @@
+
 class PlacesController < ApplicationController
-
-#here need to define certain actions
-
+#form
 def new
-@place = place.new
+@place = Place.new
 end
 
-def 
-show @place = place.find(params["id"])
-end
-
+#save
 def create
 @place = Place.new(params["place"])
 @place.save
 redirect_to "/places"
 end
 
+#read
 def index
-@places = Place.ApplicationController
+@places = Place.all
 end
 
-#covers places actions
+#display
+def show
+@place = Place.find(params["id"])
+end
+end
+
