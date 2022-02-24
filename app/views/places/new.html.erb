@@ -1,7 +1,7 @@
 <%= form_with model: @place do |form| %>
-  <p>
-    <%= form.label "name", "Place" %>
-    <%= form.text_field "name" %>
-  </p>
-  <%= form.submit %>
+<p>
+<%= form.text_field "name" %>
+<%= form.label "name", "Place" %>
+</p>
+<%= form.submit %>
 <% end %>
